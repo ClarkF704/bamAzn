@@ -66,8 +66,9 @@ function start() {
                     }]).then(function (answer3) {
                             console.log(answer3)
                         if(answer3.stock_request === "yes") {
-                            ("UPDATE products SET ? WHERE ?", [
-                                { stock_quantity : 20 }, 
+                            var newQuantity = stock[itemID - 1] - answer2.stock_q
+                            connection.query("UPDATE products SET ? WHERE ?", [
+                                { stock_quantity : newQuantity }, 
                                 { item_id: itemID }
                            ]),
                                 function (err, res) {
