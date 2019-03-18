@@ -1,0 +1,13 @@
+h1{
+    font-family: 'Exo 2', sans-serif;
+    text-align:center;
+    color:limegreen;
+}
+h2{
+    font-family: 'Exo 2', sans-serif;
+    text-align:center;
+    color:white;
+}
+body{
+    background-image: url("space.jpg");
+}
